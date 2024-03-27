@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/shopButton"
+        android:visibility="gone"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:drawableBottom="@drawable/baseline_shopping_cart_24"
+        android:text="nothing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include layout="@layout/toolbar"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="367dp"
+        android:layout_height="305dp"
+        android:layout_margin="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+    <TextView
+        android:id="@+id/bikeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="152dp"
+        android:text="Имя питомца"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <TextView
+        android:id="@+id/bikeColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="8dp"
+        android:text="Цвет:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bikeName"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <TextView
+        android:id="@+id/bikePrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        android:text="Цена:"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/bikeName"
+        tools:layout_editor_absoluteX="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

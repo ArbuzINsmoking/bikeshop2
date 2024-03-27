@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Магазин велосипедов</string>
+    <string name="title_activity_zooshop">BikeActivity</string>
+    <string name="title_activity_main_landscape">MainLandscape</string>
+</resources>

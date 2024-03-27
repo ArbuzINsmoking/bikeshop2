@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/title_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundCorner"
+        />
+
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvHeading"
+    android:textColor="@color/black"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/title_image"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginStart="16dp"
+    android:text="Название ноутбука может быть длинным хз стоит ли делать большой шрифт"
+    />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="40000 Рублей"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/title_image"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        android:layout_margin="20dp"
+        />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/openButton"
+        app:layout_constraintRight_toLeftOf="@id/purchaseButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        android:drawableBottom="@drawable/baseline_folder_open_24"
+        android:text="nothing"
+        />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/purchaseButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        android:layout_margin="10dp"
+        android:drawableBottom="@drawable/baseline_shopping_cart_24"
+        android:text="nothing"
+        />
+<View
+    android:layout_width="match_parent"
+    android:id="@+id/view"
+    android:layout_height="1dp"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/title_image"
+    android:background="@color/underline"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
